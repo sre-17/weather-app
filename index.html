@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Weather-app</title>
+</head>
+<body>
+    <div id="container">
+        <header class="main-header">
+            <h1>Weather App</h1>
+        </header>
+        <main class="main-content">
+            <div class="weather-card">
+                <h2 id="city">Uganda</h2>
+                <div id="weather-info">
+                    <img src="rain-weather-svgrepo-com.svg" alt="rainyweather" height="50px" width="50px">
+                    <ul id="description">
+                        <li>Clouds</li>
+                        <li>"Overcast Clouds"</li>
+                    </ul>
+                    <ul id="temperature">
+                        <li>Temperature: 298.15</li>
+                        <li>Feels like: 301.43</li>
+                    </ul>
+                </div>
+                <div id="additional-info">
+                    <p>Humidity:</p>
+                    <p>Pressure:</p>
+                    <p>Temperature: max,min</p>
+                </div>
+                <div id="slider">
+                    <label for="switch">View in Fahrenheit</label>
+                    <input type="range" id="switch" min="0" max="1" value="0">
+                </div>
+            </div>
+            <form class="search">
+                <label for="search-box">Enter City: </label>
+                <input id="search-box" type="text" placeholder="City">
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

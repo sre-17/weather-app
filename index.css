@@ -1,0 +1,166 @@
+body,html,ul,ol,h1,h2,li,p {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+button {
+    margin:0px 5px;
+}
+
+label {
+    margin-right: 7px;
+}
+
+h1 {
+    margin: 5px 0px;
+}
+
+input[type=text] {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid lightgray;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid lawngreen;
+}
+
+input[type=range] {
+    width: 10%;
+}
+
+
+.main-header {
+    grid-area: header;
+    text-align: center;
+    border-bottom: solid 1px;
+    border-color: rgba(237,230,245,1);
+    
+}
+
+.main-content {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.search {
+    margin-top: 2%;
+    max-width: 800px;
+    flex: 1 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search > button {
+    margin-top: 2px;
+}
+
+.weather-card {
+    width: 100%;
+    display: flex;
+    height: 45vh;
+    margin: 2%;
+    border-radius: 1.5%;
+    max-width: 800px;
+    box-shadow: 0px 0px 9px 5px rgba(177, 193, 174, 0.40);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.weather-card > * {
+    flex: 1 1 100%;
+}
+#city {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#weather-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#weather-info > img {
+    align-self: center;
+}
+
+#description > li:nth-child(2) {
+    font-style: italic;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+
+    ;
+}
+
+#additional-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 500px) {
+
+}
+
+@media(min-width:700px) {
+    input[type=range] {
+        width: 7%;
+    }
+
+    #container {
+        grid-template-columns:1fr 2fr 1fr;
+        grid-template-areas:
+            "header header header"
+            ". main ." 
+        ;
+    }
+
+    .search > input {
+        flex: 0 1 50%;
+    }
+    .search > button {
+        margin-top: 0%;
+    }
+    #weather-info {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #weather-info > * {
+        margin: 0% 2%;
+    }
+
+    #additional-info {
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    #slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
